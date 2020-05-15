@@ -5,7 +5,7 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Kathryn Anderson"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -28,9 +28,17 @@ __author__ = "???"
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
+    test_index = None
+    result = []
 
+    for num in nums:
+        if num != test_index:
+            result.append(num)
+            test_index = num
+    return result
+
+# Credit goes to: https://www.pylenin.com/blogs/remove-consecutive-duplicates/
+# located under Method 1 - For loops will never go out of fashion
 
 # E. linear_merge
 # Given two lists sorted in increasing order, create and
@@ -44,9 +52,20 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
-    # your code here
-    return
+    result = []
 
+    while len(list1) and len(list2):
+        if list1[0] < list2[0]:
+            result.append(list1.pop(0))
+        else:
+            result.append(list2.pop(0))
+    
+    result.extend(list1)
+    result.extend(list2)
+    return result
+
+# Credit goes to: https://stackoverflow.com/questions/7237875/linear-merging-for-lists-in-python
+# Submitted solution given to Megan Taylor.
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

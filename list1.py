@@ -5,7 +5,7 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Kathryn Anderson"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -26,9 +26,14 @@ __author__ = "???"
 
 
 def match_ends(words):
-    # your code here
-    return
+    count = 0
 
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return count
+
+# Credit given to: https://www.w3resource.com/python-exercises/list/python-data-type-list-exercise-5.php
 
 # B. front_x
 # Given a list of strings, return a list with the strings in
@@ -42,9 +47,17 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
-
+    a = []
+    b = []
+    # result = []
+    for word in words:
+        if word[0] == "x":
+            a.append(word)
+            a.sort()
+        else:
+            b.append(word)
+            b.sort()
+    return a + b
 
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in
@@ -56,8 +69,10 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    # your code here
-    return
+    return sorted(tuples, key=lambda x: x[-1])
+
+# Credit given to: https://stackoverflow.com/questions/14829300/python-tuples-sorting-based-on-last-element
+# written by: Volatility
 
 
 # Provided simple test() function used in main() to print
