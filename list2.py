@@ -28,9 +28,17 @@ __author__ = "Kathryn Anderson"
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
+    test_index = None
+    result = []
 
+    for num in nums:
+        if num != test_index:
+            result.append(num)
+            test_index = num
+    return result
+
+# Credit goes to: https://www.pylenin.com/blogs/remove-consecutive-duplicates/
+# located under Method 1 - For loops will never go out of fashion
 
 # E. linear_merge
 # Given two lists sorted in increasing order, create and
