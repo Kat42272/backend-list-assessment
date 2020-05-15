@@ -26,9 +26,14 @@ __author__ = "Kathryn Anderson"
 
 
 def match_ends(words):
-    # your code here
-    return
+    count = 0
 
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return count
+
+# Credit given to: https://www.w3resource.com/python-exercises/list/python-data-type-list-exercise-5.php
 
 # B. front_x
 # Given a list of strings, return a list with the strings in
