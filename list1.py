@@ -47,9 +47,17 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
-
+    a = []
+    b = []
+    # result = []
+    for word in words:
+        if word[0] == "x":
+            a.append(word)
+            a.sort()
+        else:
+            b.append(word)
+            b.sort()
+    return a + b
 
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in
