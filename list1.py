@@ -69,8 +69,10 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    # your code here
-    return
+    return sorted(tuples, key=lambda x: x[-1])
+
+# Credit given to: https://stackoverflow.com/questions/14829300/python-tuples-sorting-based-on-last-element
+# written by: Volatility
 
 
 # Provided simple test() function used in main() to print
